@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$navbarHeight: 10vh;
+
+html {
+    margin: 0;
+    padding: 0;
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    & {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    #gatsby-focus-wrapper {
+        overflow-x: hidden;
+
+        section {
+            width: 100vw;
+            height: 100vh;
+
+            .navbar-spacer {
+                height: $navbarHeight;
+            }
+
+            @keyframes bounce-animation {
+                0%   { transform: translateY(0); }
+                50% { transform: translateY(-50px); }
+                100% { transform: translateY(0); }
+            }
+            
+            .expand-icon {
+                animation-name: bounce-animation;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+            }
+            
+        }
+
+        .material-icons {
+            font-family: 'Material Icons';
+          }
+
+    }
+}
