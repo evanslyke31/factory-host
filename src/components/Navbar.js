@@ -14,7 +14,7 @@ class Navbar extends React.Component {
 
   render () { 
     return (
-      <div className={'navbar-container fixed flex justify-evenly items-center'}>
+      <div id="navbar" className={'navbar-container fixed flex justify-evenly items-center'}>
         <div className="w-1/2 flex justify-evenly">
           <div className={`text-2xl navbar-link ${this.props.currentSection === 'landing' ? 'active' : ''}`} onClick={() => this.scrollToCallbackFn('landing')}>
             FactoryHost
