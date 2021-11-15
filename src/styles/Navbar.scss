@@ -1,9 +1,20 @@
+@use 'variables';
+
 .navbar-container {
     margin: auto;
     width: 100vw;
-    height: 10vh;
+    height: variables.$navbarHeight;
     background-color: black;
     color: white;
     font-family: 'Orbitron', sans-serif;
 
+    .navbar-link {
+        cursor: pointer;
+        padding: 10px;
+
+        &.active {
+            outline-color: white;
+            outline-style: solid;
+        }
+    }
 }

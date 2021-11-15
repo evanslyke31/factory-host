@@ -1,8 +1,9 @@
+@use 'variables';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-$navbarHeight: 10vh;
 
 html {
     margin: 0;
@@ -27,7 +28,7 @@ html {
             height: 100vh;
 
             .navbar-spacer {
-                height: $navbarHeight;
+                height: variables.$navbarHeight;
             }
 
             @keyframes bounce-animation {
@@ -40,13 +41,18 @@ html {
                 animation-name: bounce-animation;
                 animation-duration: 4s;
                 animation-iteration-count: infinite;
+                cursor: pointer;
             }
-            
+
         }
 
         .material-icons {
             font-family: 'Material Icons';
-          }
+        }
+
+        .hidden {
+            display: hidden;
+        }
 
     }
 }

@@ -27,6 +27,14 @@ class IndexPage extends React.Component {
   scrolling = false;
   scrollingTimeoutId;
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      currentSection: this.sections[0]
+    };
+  }
+
   componentDidMount () {
     window.addEventListener('DOMMouseScroll', this.preventDefault, false); // older FF
     window.addEventListener(this.wheelEvent, this.preventDefault, this.wheelOpt); // modern desktop
@@ -57,10 +65,10 @@ class IndexPage extends React.Component {
     return (
       <main style={main}>
         <title>Home Page</title>
-        <Navbar />
-        <LandingSection name={this.sections[0]} />
-        <AboutSection name={this.sections[1]} />
-        <PricingSection name={this.sections[2]} />
+        <Navbar scrollToCallbackFn={this.scrollTo.bind(this)} currentSection={this.state.currentSection}/>
+        <LandingSection name={this.sections[0]} scrollToCallbackFn={this.scrollTo.bind(this)} currentSection={this.state.currentSection}/>
+        <AboutSection name={this.sections[1]} scrollToCallbackFn={this.scrollTo.bind(this)} currentSection={this.state.currentSection}/>
+        <PricingSection name={this.sections[2]} scrollToCallbackFn={this.scrollTo.bind(this)} currentSection={this.state.currentSection}/>
       </main>
     )
   }
@@ -87,28 +95,36 @@ class IndexPage extends React.Component {
 
       if(e.type === 'keydown') {
         if(e.keyCode === 40  && this.index < this.sections.length - 1) {
-          this.index++;
+          this.scrollTo(this.sections[this.index + 1]);
         } else if (e.keyCode === 38 && this.index > 0) {
-          this.index--;
+          this.scrollTo(this.sections[this.index - 1]);
         }
       }
     
       else if(e.type === 'wheel') {
         if(e.wheelDelta < 0 && this.index < this.sections.length - 1) {
-          this.index++;
+          this.scrollTo(this.sections[this.index + 1]);
         } else if (e.wheelDelta > 0 && this.index > 0) {
-          this.index--;
+          this.scrollTo(this.sections[this.index - 1]);
         }
       }
-    
-      scroller.scrollTo(this.sections[this.index], {
-          duration: this.scrollTimeMilliSeconds,
-          delay: 0,
-          smooth: "easeInOutQuart",
-      });
+  
     }
   }
 
+  scrollTo(section) {
+    this.index = this.sections.findIndex(s => s === section);
+
+    this.setState(state => ({
+      currentSection: section
+    }));
+
+    scroller.scrollTo(section, {
+      duration: this.scrollTimeMilliSeconds,
+      delay: 0,
+      smooth: "easeInOutQuart",
+    });
+  }
 }
 
 export default IndexPage
