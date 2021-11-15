@@ -32,8 +32,15 @@ section {
         }
     }
 
+    .triangles {
+        top: #{variables.$navbarHeight};
+        height: calc(100vh - #{variables.$navbarHeight});
+        width: 100vw;
+    }
+
     .title-container {
-        top: calc(-200px + #{variables.$navbarHeight});
+        top: calc(-100vh + #{variables.$navbarHeight});
+        height: calc(100vh - #{variables.$navbarHeight});
         position: relative;
         font-family: 'Orbitron', sans-serif;
 
@@ -50,7 +57,7 @@ section {
         }
 
         .sub-title {
-            @apply w-full m-auto text-4xl text-center mt-4;
+            @apply w-full m-auto text-4xl text-center;
 
             &.animate {
                 animation-name: fade-in-animation-2;
