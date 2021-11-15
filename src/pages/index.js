@@ -21,7 +21,10 @@ class IndexPage extends React.Component {
   keys = {37: 1, 38: 1, 39: 1, 40: 1};
   supportsPassive = false;
   wheelOpt = this.supportsPassive ? { passive: false } : false;
-  wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+  wheelEvent = 'wheel';
+  useEffect () {
+    wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+  }
 
   scrollTimeMilliSeconds = 800;
   scrolling = false;

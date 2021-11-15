@@ -3,6 +3,7 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "factory-host",
   },
+  pathPrefix: "/factory-host",
   plugins: [
     {    
       resolve: `gatsby-plugin-sass`,
