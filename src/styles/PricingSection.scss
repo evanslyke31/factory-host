@@ -3,18 +3,17 @@ section.pricing {
     background-color: rgb(241, 241, 241);
 
     .pricing-container {
-        @apply flex flex-col;
+        @apply flex flex-col pt-24;
 
         .card-container {
-            @apply m-auto p-12;
+            @apply m-auto;
         
-            background-color: white;
             width: 50vw;
             height: 50vh;
         }
 
         .pricing-checkout {
-            @apply flex justify-between m-auto px-12 pt-6;
+            @apply flex justify-between m-auto px-12 pt-12;
 
             width: 50vw;
             font-family: 'Orbitron', sans-serif;

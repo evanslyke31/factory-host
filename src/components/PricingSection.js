@@ -62,7 +62,7 @@ class PricingSection extends React.Component {
               <PricingCard currentIndex={this.state.currentIndex} maxIndex={this.maxIndex} content={this.plans[this.state.currentIndex].content} updateIndexCallbackFn={this.updateIndex.bind(this)}/>
             </div>
             <div className="pricing-checkout">
-              <div className="price">${this.plans[this.state.currentIndex].price}</div>
+              <div className="price">${this.plans[this.state.currentIndex].price} / mo</div>
               <button>Buy</button>
             </div>
           </div>
