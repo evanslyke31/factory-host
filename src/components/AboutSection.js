@@ -40,7 +40,7 @@ class AboutSection extends React.Component {
               </div>
             </div>
             <div className={'flex align-self-end expand-icon-container'}>
-              <div className={'text-8xl material-icons m-auto expand-icon'} onClick={() => this.scrollToCallbackFn('pricing')}>expand_more</div>
+              <div className={'material-icons m-auto expand-icon'} onClick={() => this.scrollToCallbackFn('pricing')}>expand_more</div>
             </div>
           </div>
         </section>

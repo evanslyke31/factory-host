@@ -17,11 +17,11 @@ class PricingCard extends React.Component {
         return (
             <div className="pricing-card">
                 <div className="arrow-placeholder">
-                    <div className={`text-8xl material-icons ${(this.props.currentIndex > 0) ? '' : 'hidden'}`} onClick={() => this.updateIndexCallbackFn(-1)}>chevron_left</div>
+                    <div className={`material-icons ${(this.props.currentIndex > 0) ? '' : 'hidden'}`} onClick={() => this.updateIndexCallbackFn(-1)}>chevron_left</div>
                 </div>
                     {this.props.content}
                 <div className="arrow-placeholder">
-                    <div className={`text-8xl material-icons ${(this.props.currentIndex < this.props.maxIndex) ? '' : 'hidden'}`} onClick={() => this.updateIndexCallbackFn(1)}>chevron_right</div>
+                    <div className={`material-icons ${(this.props.currentIndex < this.props.maxIndex) ? '' : 'hidden'}`} onClick={() => this.updateIndexCallbackFn(1)}>chevron_right</div>
                 </div>
             </div>
         );

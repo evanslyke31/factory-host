@@ -40,7 +40,7 @@ class LandingSection extends React.Component {
               A Satisfactory Dedicated Server Provider
             </div>
             <div className={'flex expand-icon-container'}>
-              <div className={'text-8xl material-icons m-auto expand-icon'} onClick={() => this.scrollToCallbackFn('about')}>expand_more</div>
+              <div className={'material-icons m-auto expand-icon'} onClick={() => this.scrollToCallbackFn('about')}>expand_more</div>
             </div>
           </div>
         </section>
