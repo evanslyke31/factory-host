@@ -23,7 +23,7 @@ class IndexPage extends React.Component {
   wheelOpt = this.supportsPassive ? { passive: false } : false;
   wheelEvent = 'wheel';
   useEffect () {
-    wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+    this.wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
   }
 
   scrollTimeMilliSeconds = 800;
@@ -39,7 +39,7 @@ class IndexPage extends React.Component {
   }
 
   componentDidMount () {
-    window.addEventListener('DOMMouseScroll', this.preventDefault, false); // older FF
+    window.addEventListener('DOMMouseScroll', this.preventDefault, {}); // older FF
     window.addEventListener(this.wheelEvent, this.preventDefault, this.wheelOpt); // modern desktop
     window.addEventListener('touchmove', this.preventDefault, this.wheelOpt); // mobile
     window.addEventListener('keydown', this.preventDefaultForScrollKeys, false);
@@ -84,7 +84,10 @@ class IndexPage extends React.Component {
   }
 
   preventDefault = (e) => {
+    console.log(e);
+
     e.preventDefault();
+    e.stopPropagation();
 
     if (!this.scrolling) {
 
@@ -116,6 +119,7 @@ class IndexPage extends React.Component {
   }
 
   scrollTo(section) {
+    console.log('test');
     this.index = this.sections.findIndex(s => s === section);
 
     this.setState(state => ({

@@ -17,8 +17,8 @@ section {
     .cards {
         @apply flex gap-2 justify-evenly;
 
-        div {
-            padding: 15px;
+        & > div {
+            padding: 30px 30px 45px 45px;
             box-shadow: 60px -16px black;
             height: 40vh;
             width: 27vw;
@@ -40,6 +40,18 @@ section {
                 animation-name: fade-in-animation-1;
                 animation-iteration-count: 1;
                 animation-duration: 4s;
+            }
+
+            .title {
+                text-align: center;
+                font-size: 1.5em;
+                font-family: 'Orbitron', sans-serif;
+                font-weight: 800;
+                margin-bottom: 15px;
+            }
+
+            .description {
+                font-size: 1.1em;
             }
         }
     }

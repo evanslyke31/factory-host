@@ -32,14 +32,14 @@ class LandingSection extends React.Component {
           <div className="navbar-spacer"></div>
           <div id="triangles" className="triangles">
           </div>
-          <div className={'flex flex-col title-container'}>
+          <div id="triangles-container" className={'flex flex-col justify-center m-auto title-container gap-12'}>
             <div className={`title ${(this.props.currentSection === this.sectionName ? 'animate' : '')}`}>
               FactoryHost {this.isToggled}
             </div>
             <div className={`sub-title ${(this.props.currentSection === this.sectionName ? 'animate' : '')}`}>
               A Satisfactory Dedicated Server Provider
             </div>
-            <div className={'flex align-self-end expand-icon-container mt-auto'}>
+            <div className={'flex expand-icon-container'}>
               <div className={'text-8xl material-icons m-auto expand-icon'} onClick={() => this.scrollToCallbackFn('about')}>expand_more</div>
             </div>
           </div>

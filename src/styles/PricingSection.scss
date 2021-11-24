@@ -1,0 +1,40 @@
+section.pricing {
+
+    background-color: rgb(241, 241, 241);
+
+    .pricing-container {
+        @apply flex flex-col;
+
+        .card-container {
+            @apply m-auto p-12;
+        
+            background-color: white;
+            width: 50vw;
+            height: 50vh;
+        }
+
+        .pricing-checkout {
+            @apply flex justify-between m-auto px-12 pt-6;
+
+            width: 50vw;
+            font-family: 'Orbitron', sans-serif;
+
+            .price {
+                font-size: 1.2em;
+            }
+
+            button {
+                @apply px-4 py-2;
+
+                outline-color: black;
+                outline-style: solid;
+
+                &:hover {
+                    background-color: black;
+                    color: white;
+                }
+            }
+            
+        }
+    }
+}

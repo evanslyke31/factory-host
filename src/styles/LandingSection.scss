@@ -1,6 +1,6 @@
 @use 'variables';
 
-section {
+section.landing {
 
     @keyframes fade-in-animation-1 {
         0% { 
@@ -45,7 +45,7 @@ section {
         font-family: 'Orbitron', sans-serif;
 
         .title {
-            @apply w-full m-auto text-7xl text-center;
+            @apply w-full text-7xl text-center;
 
             font-weight: 900;
 
@@ -57,7 +57,7 @@ section {
         }
 
         .sub-title {
-            @apply w-full m-auto text-4xl text-center;
+            @apply w-full text-4xl text-center;
 
             &.animate {
                 animation-name: fade-in-animation-2;
@@ -65,5 +65,11 @@ section {
                 animation-iteration-count: 1;
             }
         }
+    }
+
+    .expand-icon-container {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
     }
 }
