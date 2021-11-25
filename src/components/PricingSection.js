@@ -63,7 +63,7 @@ class PricingSection extends React.Component {
             </div>
             <div className="pricing-checkout">
               <div className="price">${this.plans[this.state.currentIndex].price} / mo</div>
-              <button>Buy</button>
+              <button onClick={() => window.location = `/buy?id=${this.state.currentIndex}`}>Buy</button>
             </div>
           </div>
     </section>

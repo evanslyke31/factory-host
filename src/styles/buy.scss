@@ -1,0 +1,44 @@
+@use 'variables';
+
+html,body {
+    background-color: rgb(241, 241, 241);
+}
+
+.plan-description {
+    @apply pl-6 pr-16 py-6;
+
+    outline: black;
+    outline-style: solid;
+    outline-width: 6px;
+
+    .title {
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+
+    .content {
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+}
+
+.buy-form {
+    @apply pl-6 pr-16 py-6;
+
+    outline: black;
+    outline-style: solid;
+    outline-width: 6px;
+
+    .title {
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+}
+
+.buy-button {
+    @apply pl-6 pr-16 py-6;
+
+    outline: black;
+    outline-style: solid;
+    outline-width: 6px;
+}

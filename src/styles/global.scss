@@ -56,4 +56,20 @@ html {
         }
 
     }
+
+    button {
+        @apply px-4 py-2;
+
+        outline-color: black;
+        outline-style: solid;
+
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+    }
+
+    .buy {
+
+    }
 }

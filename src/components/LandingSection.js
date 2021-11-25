@@ -39,6 +39,9 @@ class LandingSection extends React.Component {
             <div className={`sub-title ${(this.props.currentSection === this.sectionName ? 'animate' : '')}`}>
               A Satisfactory Dedicated Server Provider
             </div>
+            <div className={`panel ${(this.props.currentSection === this.sectionName ? 'animate' : '')}`}>
+              <button onClick={() => window.location = 'https://panel.vslyke.com/'}>Admin Panel</button>
+            </div>
             <div className={'flex expand-icon-container'}>
               <div className={'material-icons m-auto expand-icon'} onClick={() => this.scrollToCallbackFn('about')}>expand_more</div>
             </div>

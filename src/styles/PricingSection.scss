@@ -21,19 +21,6 @@ section.pricing {
             .price {
                 font-size: 1.2em;
             }
-
-            button {
-                @apply px-4 py-2;
-
-                outline-color: black;
-                outline-style: solid;
-
-                &:hover {
-                    background-color: black;
-                    color: white;
-                }
-            }
-            
         }
     }
 }
