@@ -1,4 +1,4 @@
-[Live Version](https://factory-host.vslyke.com/)
+[Live Version](https://evanslyke31.github.io/factory-host/)
 
 My WIP landing site for a game server hosting provider I plan to start.
 
